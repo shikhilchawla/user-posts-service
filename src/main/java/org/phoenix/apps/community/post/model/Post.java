@@ -1,8 +1,6 @@
 package org.phoenix.apps.community.post.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,10 +15,13 @@ import java.util.List;
 @NoArgsConstructor
 public class Post {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="postId")
     private int postId;
     private int userId;
     private int communityId;
     private String postMessage;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="postId", referencedColumnName = "postId")
     private List<Comments> comments;
 }

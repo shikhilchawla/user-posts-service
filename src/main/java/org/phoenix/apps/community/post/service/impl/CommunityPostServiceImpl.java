@@ -18,13 +18,16 @@ public class CommunityPostServiceImpl implements CommunityPostService {
 
     @Override
     public List<Post> getAllPostsByCommunityId(int communityId) {
-//        List<Comments> comments = List.of(Comments.builder().commentId(5001).comment("my first comment").postId(1001).build());
-//        return List.of(Post.builder().postId(1001).postMessage("My first Post").communityId(1).userId(101).comments(comments).build());
         return this.postRepository.findAllPostByCommunityId(communityId);
     }
 
     @Override
     public Post createNewPost(Post post) {
+        return this.postRepository.save(post);
+    }
+
+    @Override
+    public Post updatePost(Post post) {
         return this.postRepository.save(post);
     }
 }

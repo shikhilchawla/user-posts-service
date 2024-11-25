@@ -33,4 +33,10 @@ public class CommunityPostResource {
         Post post = this.communityPostService.createNewPost(request);
         return ResponseEntity.ok().body(post);
     }
+
+    @PutMapping
+    public ResponseEntity<Post> updatePost(@RequestBody Post request) {
+        Post post = this.communityPostService.updatePost(request);
+        return ResponseEntity.ok().body(post);
+    }
 }

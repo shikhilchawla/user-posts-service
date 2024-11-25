@@ -9,4 +9,6 @@ public interface CommunityPostService {
     List<Post> getAllPostsByCommunityId (int communityId);
 
     Post createNewPost(Post post);
+
+    Post updatePost(Post post);
 }
