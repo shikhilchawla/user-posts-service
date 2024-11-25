@@ -20,8 +20,9 @@ public class Post {
     private int postId;
     private int userId;
     private int communityId;
+    private int groupId;
     private String postMessage;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="postId", referencedColumnName = "postId")
-    private List<Comments> comments;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name="postId", referencedColumnName = "postId")
+//    private List<Comments> comments;
 }
