@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.phoenix.apps</groupId>
-    <artifactId>CommunityPostService</artifactId>
+    <artifactId>UserPostsService</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
