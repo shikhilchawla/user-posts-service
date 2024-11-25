@@ -22,6 +22,11 @@ public class CommunityPostServiceImpl implements CommunityPostService {
     }
 
     @Override
+    public List<Post> getAllPostsByGroupId(int groupId) {
+        return this.postRepository.findAllPostByGroupId(groupId);
+    }
+
+    @Override
     public Post createNewPost(Post post) {
         return this.postRepository.save(post);
     }

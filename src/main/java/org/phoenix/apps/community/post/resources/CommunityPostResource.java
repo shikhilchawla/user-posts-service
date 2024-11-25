@@ -28,6 +28,12 @@ public class CommunityPostResource {
         return ResponseEntity.ok().body(posts);
     }
 
+    @GetMapping("/group/{groupId}")
+    public ResponseEntity<List<Post>> getGrpupPost(@PathVariable int groupId) {
+        List<Post> posts = this.communityPostService.getAllPostsByGroupId(groupId);
+        return ResponseEntity.ok().body(posts);
+    }
+
     @PostMapping
     public ResponseEntity<Post> addPost(@RequestBody Post request) {
         Post post = this.communityPostService.createNewPost(request);

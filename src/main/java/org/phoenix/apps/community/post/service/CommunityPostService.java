@@ -8,6 +8,8 @@ public interface CommunityPostService {
 
     List<Post> getAllPostsByCommunityId (int communityId);
 
+    List<Post> getAllPostsByGroupId(int groupId);
+
     Post createNewPost(Post post);
 
     Post updatePost(Post post);

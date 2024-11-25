@@ -8,4 +8,6 @@ import java.util.List;
 public interface PostRepository extends CrudRepository<Post, Integer> {
 
     List<Post> findAllPostByCommunityId(int communityId);
+
+    List<Post> findAllPostByGroupId(int groupId);
 }
